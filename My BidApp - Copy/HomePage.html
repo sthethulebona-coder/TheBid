@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TheBid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <img src="logo.jpeg" alt="Logo" onerror="this.style.backgroundColor='#6366f1'">
+        <a href="ShoppingPage.html">Shopping</a> 
+        <a href="BiddingPage.html">Bid</a>
+        <a href="ContactPage.html">Contact Us</a>
+        <a href="ProfilePage.html">Profile</a>
+        <a href="CartPage.html">Shopping Cart</a>
+        <a href="AboutPage.html">About</a>
+        <div class="cart-status">Cart: <span id="cart-count">0</span></div>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to TheBid</h1>
+
+        <h2>Games</h2>
+        <div class="grid-container" id="games-grid"></div>
+
+        <h2>Equipment</h2>
+        <div class="grid-container" id="equipment-grid"></div>
+    </div>
+
+    <script src="TheBidApp.js"></script>
+    <script>
+    const currentUser = localStorage.getItem("currentUser");
+
+    if (!currentUser) {
+        window.location.href = "Login.html"; 
+    }
+</script>
+<button onclick="logout()">Logout</button>
+
+<script>
+function logout() {
+    localStorage.removeItem("currentUser");
+    window.location.href = "Login.html"; 
+}
+</script>
+</body>
+</html>

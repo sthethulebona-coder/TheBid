@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="LoginSty.css">        
+</head>
+<body>
+    
+    <div class="login-container">
+       
+        <div id="loginSection">
+            <h2>Welcome!</h2>
+            
+            <form id="LoginForm">
+                <div class="input-group">
+                    <label for="username" class="labels">Username</label>
+                    <input type="text" id="username" required>
+                    <br><br>
+                    <label for="password" class="labels">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                
+                <button type="submit" class="btn">Login</button>
+                
+                <p id="errorMessage" class="error-msg"></p>
+            </form>
+        </div>
+
+        <div id="userSection" class="hidden">
+            <h2>Welcome Back!</h2>
+            <p class="welcome-text">Logged in as: <span id="displayUsername"></span></p>
+            <button id="logout" class="btn logout-btn">Logout</button>
+        </div>
+    </div>
+    
+    <script src="LoginScr.js"></script>
+    
+</body>
+</html>

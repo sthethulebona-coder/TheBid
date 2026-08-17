@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - TheBid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <img src="logo.jpeg" alt="Logo" onerror="this.style.backgroundColor='#6366f1'">
+        <a href="HomePage.html">Home</a>
+        <a href="ShoppingPage.html">Shopping</a> 
+        <a href="BiddingPage.html">Bid</a>
+        <a href="ContactPage.html">Contact Us</a>
+        <a href="ProfilePage.html">Profile</a>
+        <a href="AboutPage.html">About</a>
+        <div class="cart-status">Cart: <span id="cart-count">0</span></div>
+    </nav>
+
+    <div class="container">
+        <h1>Your Shopping Cart</h1>
+        
+        <div class="cart-layout">
+            <!-- Items Section -->
+            <div class="cart-section">
+                <div id="cart-items" class="cart-list"></div>
+                <div class="cart-summary">
+                    <h3>Total: $<span id="cart-total">0.00</span></h3>
+                    <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="place-order-btn">Pay & Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">✓</div>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for your purchase, <strong id="modal-customer-name"></strong>.</p>
+            <p class="modal-subtext">Order ID: <span id="modal-order-id"></span></p>
+            <p class="modal-subtext">A receipt has been sent to <span id="modal-customer-email"></span>.</p>
+            <div class="modal-actions">
+                <button class="btn" onclick="closeConfirmationModal()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="TheBidApp.js"></script>
+</body>
+</html>

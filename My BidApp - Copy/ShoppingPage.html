@@ -1,0 +1,57 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping - TheBid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <img src="logo.jpeg" alt="Logo" onerror="this.style.backgroundColor='#6366f1'">
+        <a href="HomePage.html">Home</a>
+        <a href="BiddingPage.html">Bid</a>
+        <a href="ContactPage.html">Contact Us</a>
+        <a href="ProfilePage.html">Profile</a>
+        <a href="CartPage.html">Shopping Cart</a>
+        <a href="AboutPage.html">About</a>
+        <div class="cart-status">Cart: <span id="cart-count">0</span></div>
+    </nav>
+
+    <div class="container">
+        <h1>All Products</h1>
+
+        
+        <div class="filter-controls">
+            <input 
+                type="text" 
+                id="search-input" 
+                class="search-bar" 
+                placeholder="Search games or equipment..." 
+                oninput="filterProducts()"
+            />
+            <select id="category-filter" class="category-select" onchange="filterProducts()">
+                <option value="all">All Categories</option>
+                <option value="Shooter">Shooter</option>
+                <option value="Sandbox">Sandbox</option>
+                <option value="RPG">RPG</option>
+                <option value="Sports">Sports</option>
+                <option value="Accessory">Accessory</option>
+                <option value="Peripheral">Peripheral</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Audio">Audio</option>
+                <option value="Display">Display</option>
+            </select>
+        </div>
+
+        <div id="cart-items"></div>
+        <span id="cart-total">0.00</span>
+    <span id="cart-count">0</span>
+
+        <div class="grid-container" id="all-products-grid"></div>
+    </div>
+
+    <script src="TheBidApp.js"></script>
+</body>
+</html>
